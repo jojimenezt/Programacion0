@@ -47,7 +47,8 @@ int* dif_arrs(int* a,int n,int* b,int m){
             c[h++] = u[i];
         }
     }
-    c[0] = h;return c;
+    c[0] = h;
+    return c;
 }
 
 int* dif_sim_arrs(int* a,int n, int* b,int m){

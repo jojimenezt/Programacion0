@@ -67,120 +67,106 @@ double escribir_matriz_double(double** X, int n, int m){
     }
 }
 
-double** suma_matriz(double** X,int n,double** Y,int m,int posX,int posY){
-    if(posX == n){
-        return X;
-    }
-    else{
-        if(posY == m){
-            posY = 0;
-            posX++;
-            return suma_matriz(X,n,Y,m,posX, posY);
-        }
-        else{
-            X[posX][posY] += Y[posX][posY];
-            posY++;
-            return suma_matriz(X,n,Y,m,posX,posY);
-        }
-    }
+double** suma_matriz(double** X,int n,double** Y,int m){
+    double** A=crear_matriz_double(A,n,m);
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            A[i][j] = X[i][j]+ Y[i][j];
+        };
+    };
+    return A;
 }
 
-double** multi_matriz_double(double** X,int n,double** Y,int m,int posX,int posY){
-    if(posX == n){
-        return X;
-    }
-    else{
-        if(posY == m){
-            posY = 0;
-            posX++;
-            return multi_matriz_double(X,n,Y,m,posX,posY);
-        }
-        else{
-            X[posX][posY] *= Y[posX][posY];
-            posY++;
-            return multi_matriz_double(X,n,Y,m,posX,posY);
+double** multi_matriz_double(double** X,int n,double** Y,int m){
+    double** z = crear_matriz_double(z,n,m);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+                z[i][j] = X[i][j] * Y[i][j];
         }
     }
+    return z;
 }
 
-double suma_columna_matriz(double** X,int n,int m,int columna,int posX,double sum){
-    if(posX == n){
-        return sum;
-    }else{
-        sum += X[posX][columna];
-        posX++;
-        return suma_columna_matriz(X,n,m,columna,posX,sum);
+double suma_columna_matriz(double** X,int n,int m,int columna){
+    int res= 0;
+    for(int i = 0; i < n; i++){
+        res = res+ X[i][columna];
     }
+    return res;
 }
 
-double suma_fila_matriz(double** X,int n,int m,int fila,int posY,double sum){
-    if(posY == m){
-        return sum;
+double suma_fila_matriz(double** X,int n,int m,int fila){
+    int res= 0;
+    for(int i = 0; i < m; i++){
+        res = res+ X[fila][i];
     }
-    else{
-        sum += X[fila][posY];
-        posY++;
-        return suma_fila_matriz(X,n,m,fila,posY,sum);
-    }
+    return res;
 }
 
-bool matriz_magica(double** X, int n, int m){
-    double val = suma_fila_matriz(X,n,m,0,0,0);
-    for(int i = 1; i < n; i++){
-        if(suma_fila_matriz(X,n,m,i,0,0) != val){
+double sum_diag_1(double** A, int n, int m){
+    double S=0;
+    for(int i=0;i<n;i++){
+        S= S+A[i][i];
+    }
+    return S;
+}
+
+double sum_diag_2(double** A, int n, int m){
+    double S=0;
+    for(int i=0;i<n;i++){
+        S= S+ A[n-1-i][n-1-i];
+    }
+    return S;
+}
+
+bool filas(double **A, int n, int m){
+    for(int i=1;i<n;i++){
+        if(suma_fila_matriz(A,n,m,i)!=suma_fila_matriz(A,n,m,i+1)){
             return false;
         }
     }
-    for(int j = 0; j < m; j++){
-        if(suma_columna_matriz(X,n,m,j,0,0) != val){
+    return true;
+}
+
+bool columnas(double **A, int n, int m){
+    for(int i=1;i<m;i++){
+        if(suma_columna_matriz(A,n,m,i)!=suma_columna_matriz(A,n,m,i+1)){
             return false;
         }
     }
-    double d1 = 0;
-    for(int i = 0; i < n; i++){
-        d1=d1+X[i][i];
-    }
-    double d2 = 0;
-    for(int i = 0; i < n; i++){
-        d2=d2+ X[i][n - i - 1];
-    }
-    if(d1!=val||d2!=val){
-        return false;
-    }else{
+    return true;
+}
+
+bool diagonales(double** A, int n, int m){
+    if(sum_diag_1(A,n,m)==sum_diag_2(A,n,m)){
         return true;
+    }else{
+        return false;
     }
 }
 
-double** menores_mayores_x(double** X,int n,int m,int posX,int posY,int val){
-    if(posX == n){
-        return X;
-    }
-    else{
-        if(posY == m){
-            posY = 0;
-            posX++;
-            return menores_mayores_x(X,n,m,posX,posY,val);
-        }
-        else{
-            if(val<X[posX][posY]){
-                X[posX][posY] = 1;
+bool matriz_magica(double** A, int n, int m){
+    return filas(A,n,m) && columnas(A,n,m) && diagonales(A,n,m);
+}
+
+double** menores_mayores_x(double** X,int n,int m,int val){
+    double** y=crear_matriz_double(y,n,m);
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(X[i][j]>val){
+                y[i][j] = 1;
+            }else{
+                y[i][j] = 0;
             }
-            else{
-                X[posX][posY] = 0;
-            }
-            posY++;
-            return menores_mayores_x(X,n,m,posX,posY,val);
         }
     }
+    return y;
 }
 
 double CalcularDeterminante(double** X,int n){
-    if (n == 2)
-    {
+    if (n == 2){
         return (X[0][0]*X[1][1] - X[0][1]*X[1][0]);
-    }
-    else
-    {
+    }else{
         int Actual = 0;
         int k = 0;
         int Numero = 0;
@@ -190,8 +176,8 @@ double CalcularDeterminante(double** X,int n){
         for (int i = 0; i<(n-1); i++){
                 Buffer[i] = new double[n-1];
         }
-        for (int l = 0; l < n; l++){ // Desarrollo por filas
-            for (int j = 1; j < n; j++){ // Creo una nueva matriz adjunta
+        for (int l = 0; l < n; l++){
+            for (int j = 1; j < n; j++){
                 for (int i = 0; i < n; i++){
                     if (i != l){
                         Buffer[k][j-1] = X[i][j];

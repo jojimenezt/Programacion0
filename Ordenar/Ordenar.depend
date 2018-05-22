@@ -32,7 +32,7 @@
 
 1526098152 d:\documents\github\programacion\ordenar\otros.h
 
-1526690098 source:d:\documents\github\programacion\ordenar\main.cpp
+1526703250 source:d:\documents\github\programacion\ordenar\main.cpp
 	<iostream>
 	"negocio.h"
 	"granja.h"
@@ -51,26 +51,26 @@
 	"mat_bin.h"
 	"matrices.h"
 
-1526674349 source:d:\documents\github\programacion\ordenar\polinomios.cpp
+1526702518 source:d:\documents\github\programacion\ordenar\polinomios.cpp
 	<iostream>
 	"numericos.h"
 	"polinomios.h"
 	"arreglos_ent.h"
 
-1526675015 d:\documents\github\programacion\ordenar\polinomios.h
+1526702517 d:\documents\github\programacion\ordenar\polinomios.h
 
-1526689211 source:d:\documents\github\programacion\ordenar\arr_conj.cpp
+1526691907 source:d:\documents\github\programacion\ordenar\arr_conj.cpp
 	"arr_conj.h"
 	"arreglos_ent.h"
 
 1526688904 d:\documents\github\programacion\ordenar\arr_conj.h
 
-1526685766 source:d:\documents\github\programacion\ordenar\matrices.cpp
+1526703936 source:d:\documents\github\programacion\ordenar\matrices.cpp
 	"matrices.h"
 	"arreglos_ent.h"
 	<iostream>
 
-1526686000 d:\documents\github\programacion\ordenar\matrices.h
+1526700581 d:\documents\github\programacion\ordenar\matrices.h
 
 1526687705 d:\documents\github\programacion\ordenar\mat_bin.h
 

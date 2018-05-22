@@ -13,6 +13,8 @@ double* resta_pol(double* a,int n, double* b, int m);
 
 double* mult_pol(double* a,int n, double* b, int m);
 
-double* dividir_pol(double* a,int n, double* b, int m);
+double* div_pol(double* a,int n, double* b, int m, double* s, double t);
+
+double* res_pol(double* a,int n, double* b, int m, double* s, double t);
 
 #endif // POLINOMIOS_H_INCLUDED

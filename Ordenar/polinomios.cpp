@@ -95,23 +95,30 @@ double* mult_pol(double* a,int n, double* b, int m){
     return c;
 }
 
-/*double* dividir_pol(double* p,int n,double* q,int m){
-    double* res=crear_arreglo_double(n-m);
-
-
-    return dividir_pol(p,n,q,m,r);
-}
-double div(double* p,int n,double* q, int m){
-    return p[n]/q[n];
-}
-int exp_res(n,m){
-    return n-m;
-}
-
-/*double* dividir_pol(int* p, int n,int* q, int m, int* r){
-    if(n-m>=0){r[n-m]=p[n]/q[m]
-    r_pri=}else{
-        return r;
+double* div_pol(double* a,int n, double* b, int m, double* s, double t){
+    double* d = crear_arreglo_double(n+1);
+    for(int i=0;i<=n;i++){
+        d[i] = a[i];
     }
+    for(int i=n;i>=m;i--){
+        s[i-m] = (d[i]/b[m]);
+        for(int j=0;j<=m;j++){
+            d[i-j]-= b[m-j]*s[1-m];
+        }
+    }
+    return s;
 }
-*/
+
+double* res_pol(double* a,int n, double* b, int m, double* s, double t){
+    double* d = crear_arreglo_double(n+1);
+    for(int i=0;i<=n;i++){
+        d[i] = a[i];
+    }
+    for(int i=n;i>=m;i--){
+        s[i-m] = (d[i]/b[m]);
+        for(int j=0;j<=m;j++){
+            d[i-j]-= b[m-j]*s[1-m];
+        }
+    }
+    return d;
+}

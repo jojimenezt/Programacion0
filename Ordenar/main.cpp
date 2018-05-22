@@ -696,16 +696,42 @@ void polinomios(){
         case 4:{
             double* c=crear_arreglo_double(n+m);
             c=mult_pol(a,n,b,m);
-            cout<<"El polinomio resultante de la resta entre los dos polinomios es: "<<endl;
+            cout<<"El polinomio resultante de la multiplicacion entre los dos polinomios es: "<<endl;
             escribir_pol(c,n+m);
             cout<<endl;
             }
         break;
-        case 5:
-            //arreglos();
+        case 5:{
+            if(n>=m){
+                double* c=crear_arreglo_double(n-m);
+                c=div_pol(a,n,b,m,c,n-m);
+                cout<<"El polinomio resultante de la division entre los dos polinomios es: "<<endl;
+                escribir_pol(c,n-m);
+                cout<<endl;
+            }else{
+                double* c=crear_arreglo_double(m-n);
+                c=div_pol(a,n,b,m,c,m-n);
+                cout<<"El polinomio resultante de la division entre los dos polinomios es: "<<endl;
+                escribir_pol(c,m-n);
+                cout<<endl;
+            }
+        }
         break;
-        case 6:
-            //arr_conj();
+        case 6:{
+            if(n>=m){
+                double* c=crear_arreglo_double(n-m);
+                c=res_pol(a,n,b,m,c,n-m);
+                cout<<"El polinomio resultante de la division entre los dos polinomios es: "<<endl;
+                escribir_pol(c,n-m);
+                cout<<endl;
+            }else{
+                double* c=crear_arreglo_double(m-n);
+                c=res_pol(a,n,b,m,c,m-n);
+                cout<<"El polinomio resultante de la division entre los dos polinomios es: "<<endl;
+                escribir_pol(c,m-n);
+                cout<<endl;
+            }
+        }
         break;
     }
     }
@@ -741,7 +767,7 @@ void matrices(){
             cout<<"Segunda matriz"<<endl;
             llenar_matriz_double(m2,n,m);
             double** c=crear_matriz_double(c,n,m);
-            c=suma_matriz(m1,n,m2,m,0,0);
+            c=suma_matriz(m1,n,m2,m);
             cout<<"La suma de ambas matrices es:"<<endl;
             escribir_matriz_double(c,n,m);
         }
@@ -759,7 +785,7 @@ void matrices(){
             cout<<"Segunda matriz"<<endl;
             llenar_matriz_double(m2,n,m);
             double** c=crear_matriz_double(c,n,m);
-            c=multi_matriz_double(m1,n,m2,m,0,0);
+            c=multi_matriz_double(m1,n,m2,m);
             cout<<"La multiplicacion entre ambas matrices es:"<<endl;
             escribir_matriz_double(c,n,m);
         }
@@ -775,7 +801,7 @@ void matrices(){
             llenar_matriz_double(m1,n,m);
             cout<<"Ingrese el numero de la columna del cual quiere saber la suma de todos sus elementos"<<endl;
             cin>>col;
-            double res=suma_columna_matriz(m1,n,m,col,0,0);
+            double res=suma_columna_matriz(m1,n,m,col);
             cout<<"El resultado de la suma de los elementos de la columna "<<col<<" es "<<res<<endl;
         }
         break;
@@ -790,7 +816,7 @@ void matrices(){
             llenar_matriz_double(m1,n,m);
             cout<<"Ingrese el numero de la fila del cual quiere saber la suma de todos sus elementos"<<endl;
             cin>>fil;
-            double res=suma_fila_matriz(m1,n,m,fil,0,0);
+            double res=suma_fila_matriz(m1,n,m,fil);
             cout<<"El resultado de la suma de los elementos de la fila "<<fil<<" es "<<res<<endl;
         }
         break;
@@ -801,7 +827,8 @@ void matrices(){
             double** m1=crear_matriz_double(m1,n,n);
             cout<<"Primera matriz"<<endl;
             llenar_matriz_double(m1,n,n);
-            if(matriz_magica(m1,n,n)){
+            bool t=matriz_magica(m1,n,n);
+            if(t){
                 cout<<"Si es una matriz magica"<<endl;
             }else{
                 cout<<"No es una matriz magica"<<endl;
@@ -819,7 +846,7 @@ void matrices(){
             llenar_matriz_double(m1,n,m);
             cout<<"Ingrese el numero que quiere evaluar en la matriz"<<endl;
             cin>>p;
-            double** res=menores_mayores_x(m1,n,m,0,0,p);
+            double** res=menores_mayores_x(m1,n,m,p);
             escribir_matriz_double(res,n,m);
         }
         break;
@@ -835,10 +862,10 @@ void matrices(){
         }
         break;
         case 8:
-           granja();
+           //granja();
         break;
         case 9:
-           granja();
+           //granja();
         break;
         case 10:{
             int n;
@@ -862,9 +889,9 @@ void matrices(){
             int* DirF = new int[4];    DirF[0] =  0;     DirF[1] =  1;    DirF[2] =  0;    DirF[3] = -1;
             int dir = 0;
             int** c=Espiral(A, B, arr, DirF, DirC, dir, 0 , -1, 0, n, n);
-            cout<<"La Matriz puesta en espiral queda: "<<endl;
+            cout<<"La matriz puesta en espiral queda: "<<endl;
             escribir_matriz_int(c,n,n);
-            cout<<endl<<endl;
+            cout<<endl;
         }
         break;
     }
