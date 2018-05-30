@@ -23,17 +23,13 @@ double suma_columna_matriz(double** X,int n,int m,int columna);
 
 double suma_fila_matriz(double** X,int n,int m,int fila);
 
-double sum_diag_matr(double** A, int n, int m);
+bool filas_suma(double** x,int n);
 
-double sum_diag2_matr(double** A, int n, int m);
+bool columnas_suma(double** x,int n);
 
-bool filas(double **A, int n, int m);
+double suma_matriz_diagonal(double** x, int n);
 
-bool columnas(double **A, int n, int m);
-
-bool diagonal(double** A, int n, int m);
-
-bool matriz_magica(double** A, int n, int m);
+bool matriz_magica(double** A, int n);
 
 double** menores_mayores_x(double** X,int n,int m,int val);
 

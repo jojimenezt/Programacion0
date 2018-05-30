@@ -4,8 +4,8 @@ using namespace std;
 
 
 
-int** union_rel(int** r,int n,int** s,int m){
-    int** x=crear_matriz_int(x,n,m);
+bool** union_rel(bool** r,int n,bool** s,int m){
+    bool** x=crear_matriz_bool(x,n,m);
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             x[i][j]= r[i][j] || s[i][j];
@@ -14,8 +14,8 @@ int** union_rel(int** r,int n,int** s,int m){
     return x;
 }
 
-int** interseccion_rel(int** r,int** s,int n,int m){
-    int** T=crear_matriz_int(T,n,m);
+bool** interseccion_rel(bool** r,bool** s,int n,int m){
+    bool** T=crear_matriz_bool(T,n,m);
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             T[i][j]=r[i][j] && s[i][j];

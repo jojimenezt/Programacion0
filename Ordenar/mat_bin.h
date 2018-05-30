@@ -1,8 +1,8 @@
 #ifndef MAT_BIN_H_INCLUDED
 #define MAT_BIN_H_INCLUDED
 
-int** union_rel(int** r,int** s,int n,int m);
+bool** union_rel(bool** r,int n,bool** s,int m);
 
-int** interseccion_rel(int** r,int** s,int n,int m);
+bool** interseccion_rel(bool** r,bool** s,int n,int m);
 
 #endif // MAT_BIN_H_INCLUDED

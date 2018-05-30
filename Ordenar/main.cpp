@@ -827,7 +827,7 @@ void matrices(){
             double** m1=crear_matriz_double(m1,n,n);
             cout<<"Primera matriz"<<endl;
             llenar_matriz_double(m1,n,n);
-            bool t=matriz_magica(m1,n,n);
+            bool t=matriz_magica(m1,n);
             if(t){
                 cout<<"Si es una matriz magica"<<endl;
             }else{

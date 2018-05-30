@@ -88,7 +88,7 @@ double** multi_matriz_double(double** X,int n,double** Y,int m){
 }
 
 double suma_columna_matriz(double** X,int n,int m,int columna){
-    int res= 0;
+    double res= 0;
     for(int i = 0; i < n; i++){
         res = res+ X[i][columna];
     }
@@ -96,57 +96,53 @@ double suma_columna_matriz(double** X,int n,int m,int columna){
 }
 
 double suma_fila_matriz(double** X,int n,int m,int fila){
-    int res= 0;
+    double res= 0;
     for(int i = 0; i < m; i++){
         res = res+ X[fila][i];
     }
     return res;
 }
 
-double sum_diag_1(double** A, int n, int m){
-    double S=0;
-    for(int i=0;i<n;i++){
-        S= S+A[i][i];
-    }
-    return S;
-}
-
-double sum_diag_2(double** A, int n, int m){
-    double S=0;
-    for(int i=0;i<n;i++){
-        S= S+ A[n-1-i][n-1-i];
-    }
-    return S;
-}
-
-bool filas(double **A, int n, int m){
+bool filas_suma(double** x,int n){
+    double p = suma_fila_matriz(x,n,n,0);
+    bool c = true;
     for(int i=1;i<n;i++){
-        if(suma_fila_matriz(A,n,m,i)!=suma_fila_matriz(A,n,m,i+1)){
-            return false;
+        if(suma_fila_matriz(x,n,n,i)!=p){
+            c = false;
         }
     }
-    return true;
+    return c;
 }
 
-bool columnas(double **A, int n, int m){
-    for(int i=1;i<m;i++){
-        if(suma_columna_matriz(A,n,m,i)!=suma_columna_matriz(A,n,m,i+1)){
-            return false;
+bool columnas_suma(double** x,int n){
+    double p = suma_columna_matriz(x,n,n,0);
+    bool c = true;
+    for(int i=1;i<n;i++){
+        if(suma_columna_matriz(x,n,n,i)!=p){
+            c = false;
         }
     }
-    return true;
+    return c;
 }
 
-bool diagonales(double** A, int n, int m){
-    if(sum_diag_1(A,n,m)==sum_diag_2(A,n,m)){
-        return true;
-    }else{
-        return false;
+double suma_matriz_diagonal(double** x, int n){
+    int ac=0;
+    for(int i=0;i<n;i++){
+        ac = ac + x[i][i];
     }
+    return ac;
 }
 
-bool matriz_magica(double** A, int n, int m){
-    return filas(A,n,m) && columnas(A,n,m) && diagonales(A,n,m);
+bool matriz_magica(double** x,int n){
+    if(filas_suma(x,n)==1 && columnas_suma(x,n)==1){
+        double a = suma_fila_matriz(x,n,n,0);
+        double b = suma_columna_matriz(x,n,n,0);
+        double c = suma_matriz_diagonal(x,n);
+        if(a==b && b==c){
+            return true;
+        }
+    }
+    return false;
 }
 
 double** menores_mayores_x(double** X,int n,int m,int val){
@@ -171,7 +167,7 @@ double CalcularDeterminante(double** X,int n){
         int k = 0;
         int Numero = 0;
         short multiplicador;
-        double** Buffer; // Creo una nueva matriz para hacer los adjuntos
+        double** Buffer;
         Buffer = new double*[n-1];
         for (int i = 0; i<(n-1); i++){
                 Buffer[i] = new double[n-1];
@@ -186,10 +182,11 @@ double CalcularDeterminante(double** X,int n){
                 }
                 k = 0;
             }
-            if ( l % 2 != 0)
-                multiplicador = -1;
-            else
+            if ( l % 2 != 0){
+                    multiplicador = -1;
+            }else{
                 multiplicador = 1;
+            }
             Numero=Numero+(X[l][0]*CalcularDeterminante(Buffer,n-1)*multiplicador);
         }
         return Numero;
@@ -203,7 +200,6 @@ int** Espiral(int** X, bool** B, int* Y, int* DirF, int* DirC, int direccion, in
     int nf = posF + DirF[direccion];
     int nc = posC + DirC[direccion];
     if(nf >= 0 && nf < f && nc >= 0 && nc < c && !B[nf][nc]){
-        cout<<nf<<" "<<nc<<endl;
         X[nf][nc] = Y[pos];
         pos++;
         posF = nf;

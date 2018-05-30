@@ -74,3 +74,78 @@
 
 1526687705 d:\documents\github\programacion\ordenar\mat_bin.h
 
+1526691907 source:d:\documents\github\programacion0\ordenar\arr_conj.cpp
+	"arr_conj.h"
+	"arreglos_ent.h"
+
+1526688904 d:\documents\github\programacion0\ordenar\arr_conj.h
+
+1526685173 d:\documents\github\programacion0\ordenar\arreglos_ent.h
+
+1526690733 source:d:\documents\github\programacion0\ordenar\arreglos_ent.cpp
+	"arreglos_ent.h"
+	<iostream>
+	"numericos.h"
+
+1526672719 d:\documents\github\programacion0\ordenar\numericos.h
+
+1526098024 source:d:\documents\github\programacion0\ordenar\geometricos.cpp
+	<iostream>
+	"geometricos.h"
+	"numericos.h"
+
+1526097925 d:\documents\github\programacion0\ordenar\geometricos.h
+
+1526082452 source:d:\documents\github\programacion0\ordenar\granja.cpp
+	"granja.h"
+
+1526095430 d:\documents\github\programacion0\ordenar\granja.h
+
+1527641534 source:d:\documents\github\programacion0\ordenar\main.cpp
+	<iostream>
+	"negocio.h"
+	"granja.h"
+	"numericos.h"
+	"geometricos.h"
+	"otros.h"
+	"arreglos_ent.h"
+	"arr_conj.h"
+	"polinomios.h"
+	"matrices.h"
+	"mat_bin.h"
+
+1525917718 d:\documents\github\programacion0\ordenar\negocio.h
+
+1526098152 d:\documents\github\programacion0\ordenar\otros.h
+
+1526702517 d:\documents\github\programacion0\ordenar\polinomios.h
+
+1527641593 d:\documents\github\programacion0\ordenar\matrices.h
+
+1527642792 d:\documents\github\programacion0\ordenar\mat_bin.h
+
+1526688381 source:d:\documents\github\programacion0\ordenar\mat_bin.cpp
+	"mat_bin.h"
+	"matrices.h"
+
+1525917793 source:d:\documents\github\programacion0\ordenar\negocio.cpp
+	"negocio.h"
+
+1526672743 source:d:\documents\github\programacion0\ordenar\numericos.cpp
+	"numericos.h"
+
+1526098182 source:d:\documents\github\programacion0\ordenar\otros.cpp
+	"otros.h"
+	"numericos.h"
+
+1526702518 source:d:\documents\github\programacion0\ordenar\polinomios.cpp
+	<iostream>
+	"numericos.h"
+	"polinomios.h"
+	"arreglos_ent.h"
+
+1527642470 source:d:\documents\github\programacion0\ordenar\matrices.cpp
+	"matrices.h"
+	"arreglos_ent.h"
+	<iostream>
+
