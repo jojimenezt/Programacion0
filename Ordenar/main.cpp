@@ -521,7 +521,7 @@ void arreglos(){
     while(k!=0);
 }
 
-void arr_conj_opt(int* c,int x,int* d,int y){
+void arr_conj_opt(int* c,int x,int* d,int y,int n,int m){
  char** A= opciones(6);
     A[0] = "Union";
     A[1] = "Interseccion";
@@ -533,21 +533,30 @@ void arr_conj_opt(int* c,int x,int* d,int y){
     do{
         k = menu(A,6);
     switch(k){
-        case 1: cout << "La union de los conjuntos es: ";
-            imprimir(union_arrs(c,x,d,y));
-            cout << endl; break;
+         case 1:
+            cout << "La union de los conjuntos es: ";
+            escribir_arreglo_int(ordenar(elm_repetidos(union_arrs(c,x,d,y),n+m),repetidos(union_arrs(c,x,d,y),n+m)),repetidos(union_arrs(c,x,d,y),n+m));
+            cout << endl;
+        break;
         case 2:
             cout << "La interseccion entre los conjuntos es: ";
-            imprimir(inter_arrs(c,x,d,y));
-            cout << endl; break;
+            escribir_arreglo_int(ordenar(elm_repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)),repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y))),repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)));
+            cout << endl;
+        break;
         case 3:
-            cout << "La deferencia del primer conjunto con el segundo es: ";
-            imprimir(dif_arrs(c,x,d,y));
-            cout << endl; break;
-        case 4:
-            cout << "La deferencia simetrica de los conjuntos es: ";
-            imprimir(dif_sim_arrs(c,x,d,y));
-            cout << endl; break;
+            cout << "La diferencia del primer conjunto con el segundo es: ";
+            escribir_arreglo_int(ordenar(elm_repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)),repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y))),repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)));
+            cout << endl;
+        break;
+        case 4:{
+            cout << "La diferencia simetrica de los conjuntos es: ";
+            int t = tam_dif_arrs(c,x,d,y);
+            int r = tam_dif_arrs(d,y,c,x);
+            int s = t+r;
+            escribir_arreglo_int(ordenar(elm_repetidos(dif_sim_arrs(c,x,d,y),s),repetidos(dif_sim_arrs(c,x,d,y),s)),repetidos(dif_sim_arrs(c,x,d,y),s));
+            cout << endl;
+        }
+        break;
         case 5: {
             int p;
             cout << "Ingrese el numero a verificar si esta en alguno de los conjuntos: ";
@@ -584,7 +593,7 @@ void arr_conj(){
     A[3] = "Diferencia simetrica";
     A[4] = "Pertenece";
     A[5] = "Contenido";
-    A[6] = "Representacion modificada";
+    A[6] = "Representacion modificada (Organizacion de datos)";
     int k;
     int n,m;
     cout<<"Ingrese el tamano del primer conjunto"<<endl;
@@ -605,7 +614,8 @@ void arr_conj(){
     do{
         k = menu(A,7);
     switch(k){
-        case 1: cout << "La union de los conjuntos es: ";
+        case 1:
+            cout << "La union de los conjuntos es: ";
             escribir_arreglo_int(elm_repetidos(union_arrs(c,x,d,y),n+m),repetidos(union_arrs(c,x,d,y),n+m));
             cout << endl;
         break;
@@ -652,7 +662,7 @@ void arr_conj(){
             }
              break;
         case 7:{
-            arr_conj_opt(c,x,d,y);
+            arr_conj_opt(c,x,d,y,n,m);
         }
         break;
     }
