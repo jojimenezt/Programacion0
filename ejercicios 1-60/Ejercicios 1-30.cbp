@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Ejercicios 1-30" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Ejercicios 1-30" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Ejercicios 1-30" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="arr_con_opti.cpp" />
+		<Unit filename="arr_con_opti.h" />
+		<Unit filename="arr_conjuntos.cpp" />
+		<Unit filename="arr_conjuntos.h" />
+		<Unit filename="arr_polinomios.cpp" />
+		<Unit filename="arr_polinomios.h" />
+		<Unit filename="arreglos.cpp" />
+		<Unit filename="arreglos.h" />
+		<Unit filename="cadenas.cpp" />
+		<Unit filename="cadenas.h" />
+		<Unit filename="geometricos.cpp" />
+		<Unit filename="geometricos.h" />
+		<Unit filename="granja.cpp" />
+		<Unit filename="granja.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="matrices.cpp" />
+		<Unit filename="matrices.h" />
+		<Unit filename="numericos.cpp" />
+		<Unit filename="numericos.h" />
+		<Unit filename="otros.cpp" />
+		<Unit filename="otros.h" />
+		<Unit filename="rela_bina.cpp" />
+		<Unit filename="rela_bina.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

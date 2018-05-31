@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1526603530 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_con_opti.cpp
+	"arr_con_opti.h"
+	"arr_conjuntos.h"
+
+1526603530 c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_con_opti.h
+
+1526599457 c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_conjuntos.h
+
+1526605732 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_conjuntos.cpp
+	"arr_conjuntos.h"
+
+1527377157 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_polinomios.cpp
+	"arr_polinomios.h"
+	"numericos.h"
+	<iostream>
+
+1527377157 c:\users\santiago vargas\documents\programación\ejercicios 1-60\arr_polinomios.h
+
+1526080324 c:\users\santiago vargas\documents\programación\ejercicios 1-60\numericos.h
+
+1526653814 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\arreglos.cpp
+	"Arreglos.h"
+	"numericos.h"
+	<iostream>
+
+1526594989 c:\users\santiago vargas\documents\programación\ejercicios 1-60\arreglos.h
+
+1526058593 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\geometricos.cpp
+	<iostream>
+	"geometricos.h"
+
+1526054102 c:\users\santiago vargas\documents\programación\ejercicios 1-60\geometricos.h
+
+1526000124 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\granja.cpp
+	"granja.h"
+
+1526000124 c:\users\santiago vargas\documents\programación\ejercicios 1-60\granja.h
+
+1527778727 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\matrices.cpp
+	"matrices.h"
+	"arreglos.h"
+	"numericos.h"
+
+1527778727 c:\users\santiago vargas\documents\programación\ejercicios 1-60\matrices.h
+
+1526080375 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\numericos.cpp
+	"numericos.h"
+
+1526051107 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\otros.cpp
+	"otros.h"
+
+1526050400 c:\users\santiago vargas\documents\programación\ejercicios 1-60\otros.h
+
+1527552907 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\rela_bina.cpp
+	"rela_bina.h"
+
+1527389948 c:\users\santiago vargas\documents\programación\ejercicios 1-60\rela_bina.h
+
+1527778955 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\main.cpp
+	<iostream>
+	"granja.h"
+	"numericos.h"
+	"geometricos.h"
+	"otros.h"
+	"arreglos.h"
+	"arr_conjuntos.h"
+	"arr_polinomios.h"
+	"matrices.h"
+	"rela_bina.h"
+	"cadenas.h"
+
+1527722577 source:c:\users\santiago vargas\documents\programación\ejercicios 1-60\cadenas.cpp
+	"cadenas.h"
+	<iostream>
+
+1527722629 c:\users\santiago vargas\documents\programación\ejercicios 1-60\cadenas.h
+
