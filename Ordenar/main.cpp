@@ -607,19 +607,26 @@ void arr_conj(){
     switch(k){
         case 1: cout << "La union de los conjuntos es: ";
             escribir_arreglo_int(elm_repetidos(union_arrs(c,x,d,y),n+m),repetidos(union_arrs(c,x,d,y),n+m));
-            cout << endl; break;
+            cout << endl;
+        break;
         case 2:
             cout << "La interseccion entre los conjuntos es: ";
             escribir_arreglo_int(elm_repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)),repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)));
-            cout << endl; break;
+            cout << endl;
+        break;
         case 3:
             cout << "La deferencia del primer conjunto con el segundo es: ";
-            imprimir(dif_arrs(c,x,d,y));
-            cout << endl; break;
+            escribir_arreglo_int(elm_repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)),repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)));
+            cout << endl;
+        break;
         case 4:
             cout << "La deferencia simetrica de los conjuntos es: ";
-            imprimir(dif_sim_arrs(c,x,d,y));
-            cout << endl; break;
+            int t = tam_dif_arrs(c,x,d,y);
+            int r = tam_dif_arrs(d,y,c,x)
+            int s = t+r-2;
+            escribir_arreglo_int(elm_repetidos(dif_sim_arrs(c,x,d,y),s),repetidos(dif_sim_arrs(c,x,d,y),s));
+            cout << endl;
+        break;
         case 5: {
             int p;
             cout << "Ingrese el numero a verificar si esta en alguno de los conjuntos: ";
