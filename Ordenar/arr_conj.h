@@ -7,11 +7,11 @@ int* inter_arrs(int* a,int n,int* b,int m);
 
 int tam_inter_arrs(int* a,int n,int* b,int m);
 
-int* dif_arrs(int* a,int n,int* b,int m);
+int* dif_arrs(int* x,int m, int* y,int n);
 
-int tam_dif_arrs(int* a,int n,int* b,int m);
+int tam_dif_arrs(int* x,int m, int* y,int n);
 
-int* dif_sim_arrs(int* a,int n, int* b,int m);
+int* dif_sim_arrs(int* x,int m, int* y,int n);
 
 bool* pert_arrs(int* a,int n, int* b,int m, int x);
 

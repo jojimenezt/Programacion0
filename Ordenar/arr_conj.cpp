@@ -40,19 +40,19 @@ int tam_inter_arrs(int* a,int n,int* b,int m){
     return h-1;
 }
 
-int* dif_arrs(int* a,int n,int* b,int m){
+int* dif_arrs(int* x,int m, int* y,int n){
     int* u = crear_arreglo_int(m);
     for(int i=0;i<m;i++){
-        u[i] = a[i];
+        u[i] = x[i];
     }
     for(int i=0;i<m;i++){
         for(int l=0;l<n;l++){
-            if(a[i]==b[l]){
+            if(x[i]==y[l]){
                 u[i] = 0;
             }
         }
     }
-    int h=1;
+    int h =1;
     int* c = new int[h];
     for(int i=0;i<m;i++){
         if(u[i]!=0){
@@ -63,19 +63,19 @@ int* dif_arrs(int* a,int n,int* b,int m){
     return c;
 }
 
-int tam_dif_arrs(int* a,int n,int* b,int m){
+int tam_dif_arrs(int* x,int m, int* y,int n){
     int* u = crear_arreglo_int(m);
     for(int i=0;i<m;i++){
-        u[i] = a[i];
+        u[i] = x[i];
     }
     for(int i=0;i<m;i++){
         for(int l=0;l<n;l++){
-            if(a[i]==b[l]){
+            if(x[i]==y[l]){
                 u[i] = 0;
             }
         }
     }
-    int h=1;
+    int h =1;
     int* c = new int[h];
     for(int i=0;i<m;i++){
         if(u[i]!=0){
@@ -85,20 +85,20 @@ int tam_dif_arrs(int* a,int n,int* b,int m){
     return h-1;
 }
 
-int* dif_sim_arrs(int* a,int n, int* b,int m){
-    int* p = dif_arrs(a,n,b,m);
-    int* o = dif_arrs(b,m,a,n);
-    int t = tam_dif_arrs(a,n,b,m);
-    int r = tam_dif_arrs(b,m,a,n);
-    int s = t+r;
+int* dif_sim_arrs(int* x,int m, int* y,int n){
+    int* p = dif_arrs(x,m,y,n);
+    int* o = dif_arrs(y,n,x,m);
+    int a = tam_dif_arrs(x,m,y,n);
+    int b = tam_dif_arrs(y,n,x,m);
+    int s = a+b;
     int* d = crear_arreglo_int(s);
-    for(int i=0;i<t;i++){
+    for(int i=0;i<a;i++){
         d[i] = p[i];
     }
-    int ss=0;
-    for(int i=t;i<s;i++){
-            d[i] = o[ss];
-            ss++;
+    int t=0;
+    for(int i=a;i<s;i++){
+            d[i] = o[t];
+            t++;
     }
     return d;
 }

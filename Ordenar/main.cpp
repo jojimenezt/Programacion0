@@ -615,12 +615,12 @@ void arr_conj(){
             cout << endl;
         break;
         case 3:
-            cout << "La deferencia del primer conjunto con el segundo es: ";
+            cout << "La diferencia del primer conjunto con el segundo es: ";
             escribir_arreglo_int(elm_repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)),repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)));
             cout << endl;
         break;
         case 4:{
-            cout << "La deferencia simetrica de los conjuntos es: ";
+            cout << "La diferencia simetrica de los conjuntos es: ";
             int t = tam_dif_arrs(c,x,d,y);
             int r = tam_dif_arrs(d,y,c,x);
             int s = t+r;
