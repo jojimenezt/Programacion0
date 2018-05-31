@@ -5,6 +5,8 @@ int* union_arrs(int* a,int n,int* b,int m);
 
 int* inter_arrs(int* a,int n,int* b,int m);
 
+int tam_inter_arrs(int* a,int n,int* b,int m);
+
 int* dif_arrs(int* a,int n,int* b,int m);
 
 int* dif_sim_arrs(int* a,int n, int* b,int m);

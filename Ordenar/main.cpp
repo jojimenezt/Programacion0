@@ -606,11 +606,11 @@ void arr_conj(){
         k = menu(A,7);
     switch(k){
         case 1: cout << "La union de los conjuntos es: ";
-            imprimir(union_arrs(c,x,d,y));
+            escribir_arreglo_int(elm_repetidos(union_arrs(c,x,d,y),n+m),repetidos(union_arrs(c,x,d,y),n+m));
             cout << endl; break;
         case 2:
             cout << "La interseccion entre los conjuntos es: ";
-            imprimir(inter_arrs(c,x,d,y));
+            escribir_arreglo_int(elm_repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)),repetidos(inter_arrs(c,x,d,y),tam_inter_arrs(c,x,d,y)));
             cout << endl; break;
         case 3:
             cout << "La deferencia del primer conjunto con el segundo es: ";

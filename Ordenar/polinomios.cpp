@@ -103,7 +103,7 @@ double* div_pol(double* a,int n, double* b, int m, double* s, double t){
     for(int i=n;i>=m;i--){
         s[i-m] = (d[i]/b[m]);
         for(int j=0;j<=m;j++){
-            d[i-j]-= b[m-j]*s[1-m];
+            d[i-j]-= b[m-j]*s[i-m];
         }
     }
     return s;
@@ -117,7 +117,7 @@ double* res_pol(double* a,int n, double* b, int m, double* s, double t){
     for(int i=n;i>=m;i--){
         s[i-m] = (d[i]/b[m]);
         for(int j=0;j<=m;j++){
-            d[i-j]-= b[m-j]*s[1-m];
+            d[i-j]-= b[m-j]*s[i-m];
         }
     }
     return d;

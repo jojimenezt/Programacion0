@@ -2,14 +2,13 @@
 #include "arreglos_ent.h"
 
 int* union_arrs(int* a,int n,int* b,int m){
-    int r=n+m+1;
+    int r=n+m;
     int* c = crear_arreglo_int(r);
-    c[0]=r;
-    for(int i=1;i<=n;i++){
-        c[i] = a[i-1];
+    for(int i=0;i<n;i++){
+        c[i] = a[i];
     }
-    for(int i=n+1;i<r;i++){
-        c[i] = b[i-n-1];
+    for(int i=n;i<r;i++){
+        c[i] = b[i-n];
     }
     return c;
 }
@@ -20,12 +19,25 @@ int* inter_arrs(int* a,int n,int* b,int m){
     for(int i=0;i<n;i++){
         for(int l=0;l<m;l++){
             if(b[l]==a[i]){
-                c[h++] = a[i];
+                c[h-1] = a[i];
+                h++;
             }
         }
     }
-    c[0] = h;
     return c;
+}
+
+int tam_inter_arrs(int* a,int n,int* b,int m){
+    int h =1;
+    int* c = crear_arreglo_int(h);
+    for(int i=0;i<n;i++){
+        for(int l=0;l<m;l++){
+            if(b[l]==a[i]){
+                h++;
+            }
+        }
+    }
+    return h-1;
 }
 
 int* dif_arrs(int* a,int n,int* b,int m){
@@ -40,14 +52,14 @@ int* dif_arrs(int* a,int n,int* b,int m){
             }
         }
     }
-    int h =1;
+    int h=1;
     int* c = new int[h];
     for(int i=0;i<m;i++){
         if(u[i]!=0){
-            c[h++] = u[i];
+            c[h-1] = u[i];
+            h++;
         }
     }
-    c[0] = h;
     return c;
 }
 
