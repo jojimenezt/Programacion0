@@ -89,8 +89,8 @@ int* dif_sim_arrs(int* a,int n, int* b,int m){
     int* p = dif_arrs(a,n,b,m);
     int* o = dif_arrs(b,m,a,n);
     int t = tam_dif_arrs(a,n,b,m);
-    int r = tam_dif_arrs(b,m,a,n)
-    int s = t+r-2;
+    int r = tam_dif_arrs(b,m,a,n);
+    int s = t+r;
     int* d = crear_arreglo_int(s);
     for(int i=0;i<t;i++){
         d[i] = p[i];

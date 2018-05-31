@@ -619,13 +619,14 @@ void arr_conj(){
             escribir_arreglo_int(elm_repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)),repetidos(dif_arrs(c,x,d,y),tam_dif_arrs(c,x,d,y)));
             cout << endl;
         break;
-        case 4:
+        case 4:{
             cout << "La deferencia simetrica de los conjuntos es: ";
             int t = tam_dif_arrs(c,x,d,y);
-            int r = tam_dif_arrs(d,y,c,x)
-            int s = t+r-2;
+            int r = tam_dif_arrs(d,y,c,x);
+            int s = t+r;
             escribir_arreglo_int(elm_repetidos(dif_sim_arrs(c,x,d,y),s),repetidos(dif_sim_arrs(c,x,d,y),s));
             cout << endl;
+        }
         break;
         case 5: {
             int p;

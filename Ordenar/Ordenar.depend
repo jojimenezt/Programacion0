@@ -149,15 +149,15 @@
 	"arreglos_ent.h"
 	<iostream>
 
-1527801458 source:c:\users\windows\documents\github\programacion0\ordenar\arr_conj.cpp
+1527803943 source:c:\users\windows\documents\github\programacion0\ordenar\arr_conj.cpp
 	"arr_conj.h"
 	"arreglos_ent.h"
 
-1527801736 c:\users\windows\documents\github\programacion0\ordenar\arr_conj.h
+1527803407 c:\users\windows\documents\github\programacion0\ordenar\arr_conj.h
 
 1527797940 c:\users\windows\documents\github\programacion0\ordenar\arreglos_ent.h
 
-1527797940 source:c:\users\windows\documents\github\programacion0\ordenar\arreglos_ent.cpp
+1527804449 source:c:\users\windows\documents\github\programacion0\ordenar\arreglos_ent.cpp
 	"arreglos_ent.h"
 	<iostream>
 	"numericos.h"
@@ -176,7 +176,7 @@
 
 1527797940 c:\users\windows\documents\github\programacion0\ordenar\granja.h
 
-1527797940 source:c:\users\windows\documents\github\programacion0\ordenar\main.cpp
+1527803851 source:c:\users\windows\documents\github\programacion0\ordenar\main.cpp
 	<iostream>
 	"negocio.h"
 	"granja.h"
