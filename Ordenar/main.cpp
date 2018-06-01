@@ -791,21 +791,23 @@ void matrices(){
         }
         break;
         case 2:{
-            int n,m;
+            int n,m,l;
             cout<<"Ingrese el numero de filas de las matrices"<<endl;
             cin>>n;
             cout<<"Ingrese el numero de columnas de las matrices"<<endl;
             cin>>m;
+            cout << "Ingrese el numero de columnas de la segunda matriz: ";
+            cin >> l;
             double** m1=crear_matriz_double(m1,n,m);
-            double** m2=crear_matriz_double(m2,n,m);
+            double** m2=crear_matriz_double(m2,m,l);
             cout<<"Primera matriz"<<endl;
             llenar_matriz_double(m1,n,m);
             cout<<"Segunda matriz"<<endl;
             llenar_matriz_double(m2,n,m);
-            double** c=crear_matriz_double(c,n,m);
-            c=multi_matriz_double(m1,n,m2,m);
+            double** c=crear_matriz_double(c,n,l);
+            c=multi_matriz_double(m1,n,m2,m,l);
             cout<<"La multiplicacion entre ambas matrices es:"<<endl;
-            escribir_matriz_double(c,n,m);
+            escribir_matriz_double(c,n,l);
         }
         break;
         case 3:{

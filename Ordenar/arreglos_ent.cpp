@@ -214,28 +214,6 @@ int repetidos(int* a, int n){
     return z;
 }
 
-int* imprimir(int* x){
-    int s = x[0];
-    for(int i=1;i<s;i++){
-        cout<<x[i]<<" ";
-    }
-    return x;
-}
-
-int* ordenar1(int* a,int n){
-    int temp=0;
-    if(n>1){
-        for(int i=0;i<n-1;i++){
-            if(a[i]>a[i+1]){
-                temp=a[i];
-                a[i]=a[i+1];
-                a[i+1]=temp;
-            }
-        }
-    return ordenar(a, n-1);
-    }
-}
-
 double* crear_arreglo_double(int n){
     return new double[n];
 }

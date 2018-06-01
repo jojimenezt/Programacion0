@@ -43,8 +43,6 @@ int* elm_repetidos(int* a, int n);
 
 int repetidos(int* a, int n);
 
-int* imprimir(int* x);
-
 double* crear_arreglo_double(int n);
 
 bool* crear_arreglo_bool(int n);

@@ -149,7 +149,7 @@
 	"arreglos_ent.h"
 	<iostream>
 
-1527807587 source:c:\users\windows\documents\github\programacion0\ordenar\arr_conj.cpp
+1527810389 source:c:\users\windows\documents\github\programacion0\ordenar\arr_conj.cpp
 	"arr_conj.h"
 	"arreglos_ent.h"
 
@@ -176,7 +176,7 @@
 
 1527797940 c:\users\windows\documents\github\programacion0\ordenar\granja.h
 
-1527807028 source:c:\users\windows\documents\github\programacion0\ordenar\main.cpp
+1527809055 source:c:\users\windows\documents\github\programacion0\ordenar\main.cpp
 	<iostream>
 	"negocio.h"
 	"granja.h"
@@ -195,7 +195,7 @@
 
 1527797940 c:\users\windows\documents\github\programacion0\ordenar\polinomios.h
 
-1527797940 c:\users\windows\documents\github\programacion0\ordenar\matrices.h
+1527809475 c:\users\windows\documents\github\programacion0\ordenar\matrices.h
 
 1527797940 c:\users\windows\documents\github\programacion0\ordenar\mat_bin.h
 

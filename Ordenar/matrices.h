@@ -17,7 +17,7 @@ double escribir_matriz_double(double** X, int n, int m);
 
 double** suma_matriz(double** X,int n,double** Y,int m);
 
-double** multi_matriz_double(double** X,int n,double** Y,int m);
+double** multi_matriz_double(double** X,int n,double** Y,int m,int l);
 
 double suma_columna_matriz(double** X,int n,int m,int columna);
 
@@ -33,8 +33,20 @@ bool matriz_magica(double** A, int n);
 
 double** menores_mayores_x(double** X,int n,int m,int val);
 
+int cofact_det(double** a,int n, int f, int c);
+
 double CalcularDeterminante(double** X,int n);
 
-int** Espiral(int** X, bool** B, int* Y, int* DirF, int* DirC, int direccion, int posF, int posC, int pos, int f, int c);
+double** remplazar_col(double** A, int n, double* B, int j);
+
+double* ecu_lin(double** A, int n, double* B);
+
+double** matriz_trans(double** a, int n);
+
+double** matriz_inver(double** a, int n);
+
+double** llenar_cero(int n);
+
+double** Espiral(int n, double* b);
 
 #endif // MATRICES_H_INCLUDED
